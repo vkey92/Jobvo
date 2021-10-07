@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:background="@drawable/maingredient"
+        android:layout_height="match_parent">
+
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardUseCompatPadding="true"
+                    app:cardPreventCornerOverlap="true"
+                    >
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/hintcolor"
+                        android:padding="10dp"
+                        >
+                        <ImageView android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/jobvonew"
+                            android:layout_gravity="center_horizontal"
+                            />
+
+                        <TextView
+                            android:id="@+id/lb_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/fontbold"
+                            android:textColor="@color/headingcolor1"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/lb_profileid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/fontmedium"
+                            android:textColor="@color/headingcolor1"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardUseCompatPadding="true"
+                    app:cardPreventCornerOverlap="true"
+                    >
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        >
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            >
+                            <LinearLayout
+                                android:id="@+id/mybtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/btnback"
+                                android:padding="10dp"
+                                >
+                                <ImageView android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/myac"
+                                    android:layout_gravity="center_horizontal"
+                                    app:tint="@color/white" />
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/fontmedium"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="My AC"
+                                    />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/myidbtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/btnback"
+                                android:padding="10dp"
+                                >
+                                <ImageView android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/idcard"
+                                    android:layout_gravity="center_horizontal"
+                                    />
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/fontmedium"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="My ID"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/profilebtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/btnback"
+                                android:padding="10dp"
+                                >
+                                <ImageView android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/user"
+                                    app:tint="@color/white"
+                                    android:layout_gravity="center_horizontal"
+                                    />
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/fontmedium"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Profile"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/myhisbtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/btnback"
+                                android:padding="10dp"
+                                >
+                                <ImageView android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/history"
+                                    android:layout_gravity="center_horizontal"
+                                    />
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/fontmedium"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:text="History"
+
+                                    android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
+                                    />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardUseCompatPadding="true"
+                    app:cardPreventCornerOverlap="true"
+                    >
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        >
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/scanqrbtn"
+                                android:layout_width="0dp"
+                                android:layout_height="140dp"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginRight="15dp"
+                                android:background="@drawable/btnback"
+                                android:padding="10dp"
+                                >
+                                <ImageView android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:src="@drawable/ic_scanhis"
+                                    android:layout_gravity="center_horizontal"
+                                    app:tint="@color/white" />
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/fontbold"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Scan QR Code"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/bt_scanhistory"
+                                android:layout_width="0dp"
+                                android:layout_height="140dp"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/btnback"
+                                android:padding="10dp"
+                                >
+                                <ImageView android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:src="@drawable/history"
+                                    android:layout_gravity="center_horizontal"
+                                    app:tint="@color/white" />
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/fontbold"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Scan Hisitory"
+                                    />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:weightSum="2"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/btnvisitingcard"
+                                android:layout_width="0dp"
+                                android:layout_height="140dp"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginRight="15dp"
+                                android:background="@drawable/btnback"
+                                android:padding="10dp"
+                                >
+                                <ImageView android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:src="@drawable/visitingcard"
+                                    android:scaleType="fitXY"
+                                    android:layout_gravity="center_horizontal"
+                                    app:tint="@color/white" />
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/fontbold"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Visiting Card"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btnapplyqr"
+                                android:layout_width="0dp"
+                                android:layout_height="140dp"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/btnback"
+                                android:padding="10dp"
+                                >
+                                <ImageView android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:src="@drawable/qrcode"
+                                    android:layout_gravity="center_horizontal"
+                                    app:tint="@color/white" />
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/fontbold"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Apply ID Card"
+                                    />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

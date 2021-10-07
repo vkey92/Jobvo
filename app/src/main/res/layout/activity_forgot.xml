@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="co.prerna.jobvoo.screens.Forgetpass">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/maingredient"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:id="@+id/loginview"
+                            android:layout_width="5dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="50dp"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:id="@+id/lable1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_toRightOf="@+id/loginview"
+                            android:fontFamily="@font/fontbold"
+                            android:text="Change Your"
+                            android:textColor="@color/white"
+                            android:textSize="26sp" />
+
+                        <TextView
+                            android:id="@+id/lable2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lable1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/loginview"
+                            android:fontFamily="@font/fontbold"
+                            android:text="Password"
+                            android:textColor="@color/white"
+                            android:textSize="26sp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/jobvonew" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/loginuser" />
+
+                            <EditText
+                                android:id="@+id/phoneeditview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Registered Mobile Number"
+                                android:inputType="number"
+                                android:paddingLeft="15dp"
+                                android:maxLength="10"
+                                android:textCursorDrawable="@drawable/cursor_color"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/hintcolor" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/list_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/loginpass" />
+
+                            <EditText
+                                android:id="@+id/newpasseditview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="New Password"
+                                android:inputType="textPassword"
+                                android:paddingLeft="15dp"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@drawable/cursor_color"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/hintcolor" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/list_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/loginpass" />
+
+                            <EditText
+                                android:id="@+id/confirmpasseditview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Confirm Password"
+                                android:inputType="textPassword"
+                                android:paddingLeft="15dp"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@drawable/cursor_color"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/hintcolor" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/list_divider" />
+
+                        <Button
+                            android:id="@+id/forgotsavebtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:fontFamily="@font/fontbold"
+                            android:text="Change Password"
+                            android:textAllCaps="false"
+                            android:background="@drawable/loginback"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

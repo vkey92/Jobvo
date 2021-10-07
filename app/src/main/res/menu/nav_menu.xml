@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/aboutus"
+            android:enabled="true"
+            android:icon="@drawable/ic_request"
+            android:title="About Us"
+            app:showAsAction="ifRoom" />
+    </group>
+
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/contact"
+            android:enabled="true"
+            android:icon="@drawable/ic_support"
+            android:title="Contact Us"
+            app:showAsAction="ifRoom" />
+    </group>
+
+    <group
+        android:id="@+id/grp4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/rateus"
+            android:enabled="true"
+            android:icon="@drawable/ic_support"
+            android:title="Rate Us"
+            app:showAsAction="ifRoom" />
+    </group>
+
+    <group
+        android:id="@+id/grp2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/privacypolicy"
+            android:enabled="true"
+            android:icon="@drawable/ic_terms"
+            android:iconTint="@color/white"
+            android:title="Privacy Policy"
+            app:showAsAction="ifRoom" />
+    </group>
+
+
+    <group
+        android:id="@+id/grp3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/termsadncondition"
+            android:enabled="true"
+            android:icon="@drawable/ic_terms"
+            android:iconTint="@color/colorPrimaryDark"
+            android:title="Terms &amp; Condition"
+            android:visible="false"
+            app:showAsAction="ifRoom" />
+    </group>
+
+
+    <group
+        android:id="@+id/grp8"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/logouticon"
+            android:enabled="true"
+            android:icon="@drawable/ic_logout"
+            android:iconTint="@color/colorPrimaryDark"
+            android:title="Logout"
+            app:showAsAction="ifRoom" />
+    </group>
+
+
+</menu>
+

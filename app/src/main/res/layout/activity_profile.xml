@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="profilemodel"
+            type="co.vik.jobvo.pojo.ProfileModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/maingredient"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/maingredient"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/noneditlayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/imagecardview"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="5dp"
+                                        app:cardPreventCornerOverlap="true"
+                                        app:cardUseCompatPadding="true">
+
+
+                                        <ImageView
+                                            android:id="@+id/profile_image"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_horizontal"
+                                            android:padding="5dp"
+                                            android:scaleType="fitXY"
+                                            app:civ_border_color="@color/colorAccent"
+                                            app:civ_border_width="2dp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_toLeftOf="@+id/editbtn"
+                                        android:layout_toRightOf="@id/imagecardview"
+                                        android:orientation="vertical"
+                                        android:padding="10dp">
+
+                                        <TextView
+                                            android:id="@+id/profileusername"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="marquee"
+                                            android:focusable="true"
+                                            android:focusableInTouchMode="true"
+                                            android:freezesText="true"
+                                            android:marqueeRepeatLimit="marquee_forever"
+                                            android:scrollHorizontally="true"
+                                            android:singleLine="true"
+                                            android:text="@{profilemodel.data.name}"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="18sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/profilephonenoview"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="@font/fontmedium"
+                                            android:text="@{profilemodel.data.mobile}"
+                                            android:textColor="@color/colorAccent" />
+
+                                        <TextView
+                                            android:id="@+id/profileemail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="@font/fontmedium"
+                                            android:text="@{profilemodel.data.email}"
+                                            android:textColor="@color/colorAccent" />
+
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:id="@+id/editbtn"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="10dp"
+                                        android:src="@drawable/pencil"
+                                        app:tint="@color/colorAccent" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/list_divider" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/rowcolor"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/gendertitle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".6"
+                                        android:fontFamily="@font/fontbold"
+                                        android:text="Gender :"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/profilegender"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.4"
+                                        android:fontFamily="@font/fontmedium"
+                                        android:text="@{profilemodel.data.gender}"
+                                        android:textColor="@color/colorAccent" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:background="@color/list_divider" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/dobtitle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".6"
+                                        android:fontFamily="@font/fontbold"
+                                        android:text="DOB :"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/profiledob"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.4"
+                                        android:fontFamily="@font/fontmedium"
+                                        android:text="@{profilemodel.data.dob}"
+                                        android:textColor="@color/colorAccent" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:background="@color/list_divider" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/rowcolor"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/addtitle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".6"
+                                        android:fontFamily="@font/fontbold"
+                                        android:text="Org Name :"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/profileaddress"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.5"
+                                        android:fontFamily="@font/fontmedium"
+                                        android:text="@{profilemodel.data.address}"
+                                        android:textColor="@color/colorAccent" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:background="@color/list_divider" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/statetitle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".6"
+                                        android:fontFamily="@font/fontbold"
+                                        android:text="State :"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/profilestate"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.4"
+                                        android:fontFamily="@font/fontmedium"
+                                        android:text="@{profilemodel.data.state}"
+                                        android:textColor="@color/colorAccent" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:background="@color/list_divider" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/rowcolor"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/distictitle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".6"
+                                        android:fontFamily="@font/fontbold"
+                                        android:text="Profile :"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/profiletdistrict"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.4"
+                                        android:fontFamily="@font/fontmedium"
+                                        android:text="@{profilemodel.data.distict}"
+                                        android:textColor="@color/colorAccent" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:background="@color/list_divider" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/citytitle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".6"
+                                        android:fontFamily="@font/fontbold"
+                                        android:text="City :"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/profilecity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.4"
+                                        android:fontFamily="@font/fontmedium"
+                                        android:text="@{profilemodel.data.city}"
+                                        android:textColor="@color/colorAccent" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:background="@color/list_divider" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/rowcolor"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/pincodetitle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".6"
+                                        android:fontFamily="@font/fontbold"
+                                        android:text="Pincode :"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/profilepincode"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.4"
+                                        android:fontFamily="@font/fontmedium"
+                                        android:text="@{profilemodel.data.pincode}"
+                                        android:textColor="@color/colorAccent" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:background="@color/list_divider" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".6"
+                                        android:fontFamily="@font/fontbold"
+                                        android:text="Profile Url :"
+                                        android:textColor="@color/colorAccent" />
+
+                                    <TextView
+                                        android:id="@+id/profile_url"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.4"
+                                        android:fontFamily="@font/fontmedium"
+                                        android:text="@{profilemodel.data.profileUrl}"
+                                        android:textColor="@color/colorAccent" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/editlayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/editimagecardview"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="5dp"
+                                        app:cardPreventCornerOverlap="true"
+                                        app:cardUseCompatPadding="true">
+
+                                        <ImageView
+                                            android:id="@+id/editprofileimage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_vertical"
+                                            android:padding="5dp"
+                                            android:scaleType="fitXY"
+                                            app:civ_border_color="@color/colorAccent"
+                                            app:civ_border_width="2dp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <ImageView
+                                        android:id="@+id/photoeditbtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="15dp"
+                                        android:src="@drawable/gallery" />
+
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@color/list_divider" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <EditText
+                                        android:id="@+id/editname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:focusable="false"
+                                        android:hint="Name"
+                                        android:imeOptions="actionNext"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.name}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+
+                                    <EditText
+                                        android:id="@+id/editphoneno"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:focusable="false"
+                                        android:hint="Phone Number"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="number"
+                                        android:maxLength="10"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.mobile}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+
+                                    <EditText
+                                        android:id="@+id/editemail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:hint="Email"
+                                        android:imeOptions="actionDone"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.email}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+
+                                    <Spinner
+                                        android:id="@+id/editgenderspin"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:imeOptions="actionDone"
+                                        android:padding="10dp"
+                                        android:popupBackground="@color/white"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@color/colorAccent" />
+
+
+                                    <EditText
+                                        android:id="@+id/editdob"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:focusable="false"
+                                        android:hint="DOB"
+                                        android:imeOptions="actionNext"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.dob}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+
+                                    <EditText
+                                        android:id="@+id/editaddress"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:hint="Orgainization Name"
+                                        android:imeOptions="actionNext"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.address}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+
+                                    <EditText
+                                        android:id="@+id/editstate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:hint="State"
+                                        android:imeOptions="actionNext"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.state}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+
+                                    <EditText
+                                        android:id="@+id/editdistrict"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:hint="Profile"
+                                        android:imeOptions="actionNext"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.distict}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+
+                                    <EditText
+                                        android:id="@+id/editcity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:hint="City"
+                                        android:imeOptions="actionNext"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.city}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+
+                                    <EditText
+                                        android:id="@+id/editpincode"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:hint="Pincode"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLength="6"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.pincode}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+                                    <EditText
+                                        android:id="@+id/editprofileurl"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/colorAccent"
+                                        android:hint="Profile Url"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="text"
+
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:text="@{profilemodel.data.profileUrl}"
+                                        android:textColor="@color/colorAccent"
+                                        android:textColorHint="@color/drkgrey" />
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="10dp"
+                                        app:cardElevation="8dp"
+                                        app:cardPreventCornerOverlap="false"
+                                        app:cardUseCompatPadding="true">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+
+                                            >
+
+                                            <Button
+                                                android:id="@+id/editsavebtn"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/loginback"
+                                                android:text="Save Profile"
+                                                android:textColor="@color/white"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+                                    </androidx.cardview.widget.CardView>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                </ScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
+
+
+
+
+

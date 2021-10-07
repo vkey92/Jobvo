@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="co.prerna.jobvoo.screens.Otpscreen">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/maingredient"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <View
+                    android:id="@+id/loginview"
+                    android:layout_width="5dp"
+                    android:layout_height="70dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/lable1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/loginview"
+                    android:fontFamily="@font/fontbold"
+                    android:text="Verifying"
+                    android:textColor="@color/white"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/lable2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lable1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/loginview"
+                    android:fontFamily="@font/fontbold"
+                    android:text="Mobile Number"
+                    android:textColor="@color/white"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/lb_mobileno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lable2"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/loginview"
+                    android:fontFamily="@font/fontmedium"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:padding="10dp"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/otptxtview"
+                            android:fontFamily="@font/fontbold"
+                            android:textColor="@color/orange"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone"
+                            android:layout_gravity="center_horizontal"
+                            />
+
+                        <com.goodiebag.pinview.Pinview
+                            android:id="@+id/pinview"
+                            app:pinBackground="@drawable/borderback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:pinWidth="60dp"
+                            app:pinHeight="60dp"
+                            app:pinLength="4"
+                            android:layout_marginTop="30dp"
+                            app:cursorVisible="false"
+                            app:forceKeyboard="true"
+                            app:hint="0"
+                            app:inputType="number"
+                            app:password="false"/>
+
+
+
+                        <Button android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/otpbtn"
+                            android:text="Varify"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/loginback"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginRight="35dp"
+                            android:textColor="@color/white"
+                            />
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Didn't receive a verification code?"
+                            android:textColor="@color/list_divider"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="40dp"
+                            android:fontFamily="@font/fontmedium"
+                            />
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/resendotpbtn"
+                            android:text="@string/resendotp"
+                            android:textColor="@color/colorAccent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/fontbold"
+                            android:layout_marginBottom="20dp"
+                            />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:id="@+id/lin_lay"
+        >
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainspalsh"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            >
+
+
+
+            <ImageView android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:id="@+id/logoblgothi"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/splashlogo"
+                />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/avi"
+                style="@style/AVLoadingIndicatorView"
+                android:layout_below="@+id/logoblgothi"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicatorColor="@color/white"
+                app:indicatorName="BallPulseIndicator" />
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

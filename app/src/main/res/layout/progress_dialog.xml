@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyr_root"
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:layout_margin="10dp"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lyr_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progressView"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:indicatorName="BallScaleIndicator"
+            app:indicatorColor="@color/white"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/jobvologo"/>
+    </RelativeLayout>
+
+</RelativeLayout>

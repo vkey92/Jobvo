@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottomhome"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bottomnoti"
+        android:enabled="true"
+        android:icon="@drawable/notification"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+
+   <!-- <item
+        android:id="@+id/bottomresult"
+        android:enabled="true"
+        android:icon="@drawable/resulticon"
+        android:title="Result"
+        app:showAsAction="ifRoom" />-->
+
+    <item
+        android:id="@+id/bottomchat"
+        android:enabled="true"
+        android:icon="@drawable/whatsapp"
+        android:title="Chat"
+        app:showAsAction="ifRoom" />
+
+
+
+    <item
+        android:id="@+id/bottomqrcode"
+        android:enabled="true"
+        android:icon="@drawable/qrcode"
+        android:title="QR Code"
+        app:showAsAction="ifRoom" />
+
+
+
+
+</menu>
+

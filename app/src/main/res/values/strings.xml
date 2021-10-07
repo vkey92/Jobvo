@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Jobvo</string>
+    <string name="forgotpass"><u>Forgot Password?</u></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="resendotp"><u>Resend Code</u></string>
+    <string name="playgames"><u>Next >></u></string>
+    <string name="checkinternet">Please check your internet connectivity.</string>
+    <string name="registernow"><u> Register Now</u></string>
+    <string name="donthaveac">Do not have an account? Sing Up Now</string>
+    <string name="turn_off_flashlight">Flash on</string>
+    <string name="turn_on_flashlight">flash off</string>
+    <string name="message">Place a Barcode or QR code inside the  rectangle to scan.</string>
+</resources>
