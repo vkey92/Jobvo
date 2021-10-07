@@ -2,9 +2,11 @@ package co.vik.jobvo.screens.scanhistory
 
 import android.app.Activity
 import android.app.Dialog
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -22,8 +24,10 @@ class ScannedHistory : AppCompatActivity() {
     private lateinit var binding : ActivityScannedhistoryBinding
     private lateinit var scanViewModel: ScanViewModel
     private lateinit var progressDialog : Dialog
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.window.navigationBarColor = resources.getColor(R.color.belowcolor)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_scannedhistory)
         init()
     }

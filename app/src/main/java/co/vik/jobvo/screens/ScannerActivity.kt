@@ -1,10 +1,12 @@
 package co.vik.jobvo.screens
 
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.view.animation.AnimationUtils
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import co.vik.jobvo.R
@@ -17,8 +19,10 @@ class ScannerActivity : AppCompatActivity(), TorchListener{
     private lateinit var binding: ActivityScannerBinding
     private var isFlashLightOn = false
     private var capture: CaptureManager? = null
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.window.navigationBarColor = resources.getColor(R.color.belowcolor)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_scanner)
         init()
     }

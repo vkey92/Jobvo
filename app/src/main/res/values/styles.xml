@@ -61,6 +61,8 @@
     </style>
 
     <style name="AwesomeSplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="android:textColorPrimary">@android:color/white</item>

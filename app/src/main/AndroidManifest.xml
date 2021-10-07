@@ -19,6 +19,7 @@
         <activity android:name=".screens.scanhistory.ScannedHistory"
             android:configChanges="orientation|screenSize"
             android:label="Scanned History"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             ></activity>
